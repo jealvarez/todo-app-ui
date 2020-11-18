@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title>Tasks</title>
+</head>
+<body>
+
+<div class="container">
+    <div layout:fragment="content">
+        <h1>Tasks</h1>
+        <div class="btn-new-container">
+            <a href="#" th:href="@{/tasks/new}" class="btn btn-primary">New</a>
+        </div>
+        <table class="table table-hover">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th></th>
+            </tr>
+            <th:block th:each="task : ${tasks}">
+                <tr>
+                    <td th:text="${task.id}">1</td>
+                    <td th:text="${task.name}">Task A</td>
+                    <td>
+                        <a href="#" th:href="@{|/tasks/delete/${task.id}|}"><i class="fas fa-trash"></i></a>
+                        <a href="#" th:href="@{|/tasks/${task.id}|}"><i class="fas fa-pencil-alt"></i></a>
+                    </td>
+                </tr>
+            </th:block>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

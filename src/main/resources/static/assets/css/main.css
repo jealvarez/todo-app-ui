@@ -1,0 +1,49 @@
+.footer {
+    color: black;
+    bottom: 0;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    background-color: #f8f9fa !important;
+    height: 50px;
+}
+
+.footer__legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.content {
+    padding: 3em;
+}
+
+.navbar-right {
+    width: 100%;
+    display: flex;
+    align-content: flex-end;
+    flex-direction: row-reverse!important;
+}
+
+.btn-new-container {
+    padding: 1em 0;
+}
+
+.username {
+    color: yellow !important;
+    font-weight: bold !important;
+}
+
+@media (max-width: 992px) {
+
+    .navbar-right {
+        width: auto;
+        display: flex;
+        align-content: normal;
+        flex-direction: initial;
+    }
+
+}
